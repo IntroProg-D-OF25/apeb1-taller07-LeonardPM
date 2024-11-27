@@ -6,13 +6,16 @@ import java.util.Scanner;
 public class Problema2 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int limite, cont = 5;
-        System.out.print("DAMEL LIMITE: ");
-        limite = teclado.nextInt();
-        while (cont <= limite) {
-            System.out.print(cont + "/" + ", ");
-            cont+=5;
+        int numerador=5, denominador=10, cont=0;
+        while (cont < 6){
+            System.out.print(numerador + "/" + denominador + ", ");
+            numerador+=5;
+            denominador +=2;
+            cont++;
 
         }
     }
 }
+/**
+ *
+ */

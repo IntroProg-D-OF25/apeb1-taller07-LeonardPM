@@ -11,19 +11,29 @@ import java.util.Scanner;
 public class Problema5 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        String nombreEstudiantes, estado;
-        double promedio, cont=1;
+        String nombreEstudiantes="", estado="", tn="";
+        double promedio=0, cont=1;
         while (cont<=4){
-            System.out.print("DAME NOMBRE Y PROMEDIO \n");
+            System.out.println("DAME NOMBRE Y PROMEDIO");
             nombreEstudiantes = teclado.next();
-            promedio = teclado.nextInt();
-            if (promedio>=7)
+            promedio = teclado.nextDouble();
+            if (promedio>=7) {
                 estado = "Aprobado";
-            else
+            }else {
                 estado = "Reprobado";
-            System.out.println("NOMBRE\t\tPROMEDIO\tESTADO\t");
-            System.out.println(nombreEstudiantes + "\t\t\t" + promedio + "\t\t" + estado);
+            }
+            tn += nombreEstudiantes + "\t\t\t" + promedio + "\t\t\t\t" + estado+ "\n" ;
+
             cont++;
         }
+        System.out.println("\nNOMBRE\t\tPROMEDIO\t\tESTADO\t\t\n");
+        System.out.print(tn );
     }
 }
+/**
+ * NOMBRE		PROMEDIO		ESTADO
+ * LUIS		    6.0				Reprobado
+ * JOSE		    8.0				Aprobado
+ * JOSH		    9.0				Aprobado
+ * JUAN		    7.0				Aprobado
+ */
